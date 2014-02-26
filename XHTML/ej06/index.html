@@ -4,38 +4,37 @@
     <title>Ejercicio de diseño</title>
     <meta charset="utf-8"></head>
 <body>
-    <div id="A1">
-        <ul>
-            <li>
-                <a href="#">Home</a>
-
-            </li>
-            <li>
-                <a href="#">Mollis</a>
-
-            </li>
-            <li>
-                <a href="#">Cursus</a>
-
-            </li>
-        </ul>
+    <div id="A1" class="bg-gray">
+    	<div class="wrapper">
+    		<ul class="breadcrum">
+	            <li>
+	                <a href="#">Home</a>
+	            </li>
+	            <li>
+	                <a href="#">Mollis</a>
+	            </li>
+	            <li>
+	                <span class="current">Cursus</span>
+	            </li>
+	        </ul>
+    	</div>
     </div>
     <div id="A2">
-        <div id="wrapper">
-            <div id="datosProducto">
+        <div class="wrapper">
+            <div class="marco fleft col-20">
                 <img src="imagenes/140x180.gif" id="fotoProducto">
-                <p id="offer">Best offer</p>
-                <p>
-                    $154,00 <a href="#">buy</a>
+                <p class="txt-red">Best offer</p>
+                <p> <strong class="prize">$154,00</strong>
+                    <a href="#" class="btn btn-buy btn-big">buy</a>
                 </p>
                 <p>
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
                 </p>
             </div>
-            <div id="descripcionProducto">
-                <p> <strong>dolore</strong>
+            <div class="fleft col-80">
+                <h1 class="titular"> <strong>dolore</strong>
                     magnam aliquam quaerat voluptatem
-                </p>
+                </h1>
                 <p>
                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatu
                 </p>
@@ -43,15 +42,14 @@
         </div>
     </div>
     <div id="A3">
-        <table>
+        <table class="wrapper table-bordered">
             <thead>
                 <tr>
-                    <td colspan="6">5 offers</td>
+                    <th colspan="6" class="numOfertas">5 offers</th>
                     <th>Posuere</th>
                     <th>Risus</th>
                     <th>Ultricius</th>
-                    <th>Gravida</th>
-                    <td></td>
+                    <th colspan="2">Gravida</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,24 +60,35 @@
                         <img src="imagenes/30x30.gif"></td>
                     <td class="colLikes">
                         <img src="imagenes/20x30.gif">
-                        <span>256</span>
+                        <span class="txt-light-gray">256</span>
                     </td>
                     <td class="colFav">
                         <img src="imagenes/20x30.gif">
-                        <span>sit</span>
+                        <span class="txt-light-gray">sit</span>
                     </td>
                     <td class="colComments">
                         <img src="imagenes/20x30.gif">
-                        <span>3</span>
+                        <span class="txt-light-gray">3</span>
                     </td>
                     <td class="colShare">
-                        <img src="imagenes/100x30.gif"></td>
+						<span class="social">
+							<span class="share">Share</span>
+							<span class="links hidden">
+								<a href=""><img src="" alt=""></a>
+								<a href=""><img src="" alt=""></a>
+								<a href=""><img src="" alt=""></a>
+								<a href=""><img src="" alt=""></a>
+							</span>
+						</span>
+                    </td>
                     <td class="colPosuere">$158</td>
                     <td class="colRisus"></td>
                     <td class="colUltricius">Lectus</td>
-                    <td class="colGravida">$158</td>
+                    <td class="colGravida">
+                        <span class="prize bold">$158</span>
+                    </td>
                     <td class="colBuy">
-                        <a href="#">BUY</a>
+                        <a href="#" class="btn btn-buy">BUY</a>
                     </td>
                 </tr>
                 <tr>
@@ -104,16 +113,17 @@
                     <td class="colPosuere">$175</td>
                     <td class="colRisus"></td>
                     <td class="colUltricius">Lectus</td>
-                    <td class="colGravida">$175</td>
+                    <td class="colGravida">
+                        <strong>$175</strong>
+                    </td>
                     <td class="colBuy">
-                        <a href="#">BUY</a>
+                        <a href="#" class="botonRojo">BUY</a>
                     </td>
                 </tr>
                 <tr>
                     <td class="col1">
                         <img src="imagenes/100x30.gif"></td>
-                    <td class="col2">
-                        <img src="imagenes/30x30.gif"></td>
+                    <td class="col2"></td>
                     <td class="colLikes">
                         <img src="imagenes/20x30.gif">
                         <span>256</span>
@@ -127,20 +137,25 @@
                         <span>3</span>
                     </td>
                     <td class="colShare">
-                        <img src="imagenes/100x30.gif"></td>
+                        <img src="imagenes/20x30.gif" class= "iconoSocial">
+                        <img src="imagenes/20x30.gif" class= "iconoSocial">
+                        <img src="imagenes/20x30.gif" class= "iconoSocial">
+                        <img src="imagenes/20x30.gif" class= "iconoSocial">
+                        </td>
                     <td class="colPosuere">$179</td>
                     <td class="colRisus">2%</td>
                     <td class="colUltricius">+$3.99</td>
-                    <td class="colGravida">$179</td>
+                    <td class="colGravida">
+                        <strong>$179</strong>
+                    </td>
                     <td class="colBuy">
-                        <a href="#">GO</a>
+                        <a href="#" class="botonVerde">GO</a>
                     </td>
                 </tr>
                 <tr>
                     <td class="col1">
                         <img src="imagenes/100x30.gif"></td>
-                    <td class="col2">
-                        <img src="imagenes/30x30.gif"></td>
+                    <td class="col2"></td>
                     <td class="colLikes">
                         <img src="imagenes/20x30.gif">
                         <span>256</span>
@@ -158,9 +173,11 @@
                     <td class="colPosuere">$180</td>
                     <td class="colRisus">180%</td>
                     <td class="colUltricius">Lectus</td>
-                    <td class="colGravida">$80,50</td>
+                    <td class="colGravida">
+                        <strong>$80,50</strong>
+                    </td>
                     <td class="colBuy">
-                        <a href="#">BUY</a>
+                        <a href="#" class="botonRojo">BUY</a>
                     </td>
                 </tr>
                 <tr>
@@ -185,16 +202,18 @@
                     <td class="colPosuere">$201</td>
                     <td class="colRisus"></td>
                     <td class="colUltricius">$201</td>
-                    <td class="colGravida">$201</td>
+                    <td class="colGravida">
+                        <strong>$201</strong>
+                    </td>
                     <td class="colBuy">
-                        <a href="#">BUY</a>
+                        <a href="#" class="botonRojo">BUY</a>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div id="A4">
-        <div id="A4I">
+        <div class="fleft col-50">
             <h2>Lorem ipsum ad his scripta blandit partiendo</h2>
             <ul>
                 <li>
@@ -226,19 +245,16 @@
                 </li>
             </ul>
         </div>
-        <div id="A4D">
+        <div class="fleft col-50">
             <h2>Qui ut wisi vocibus suscipiantur</h2>
 
             <ul>
                 <li>
-                    <div class="enlaceArticulo">
-                        <a href="#">Te utamur civibus eleifend qui</a>
-                    </div>
-                    <div class="descripcionArticulo">
-                        <p>
+                        <a href="#" class="fleft col-20 txt-blue">Te utamur civibus eleifend qui</a>
+                        <p class="fleft col-80">
                             Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
                         </p>
-                    </div>
+
                 </li>
                 <li>
                     <div class="enlaceArticulo">
@@ -275,10 +291,12 @@
     </div>
     <div id="A5">
         <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            <strong>mollit</strong>
+            anim id est laborum
         </p>
-        <span>Quisquam 2013</span>
-        <ul>
+        <span id="copyright">Quisquam 2013</span>
+        <ul class="menupie">
             <li>
                 <a href="#">quisquam.com</a>
             </li>
