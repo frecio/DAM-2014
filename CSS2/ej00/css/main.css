@@ -1,4 +1,7 @@
-*{border: 1px solid #000;}
+*{
+	border: 1px solid #000;
+	box-sizing: border-box;/* CSS3 evita que coja el padding y el border para el tamaño*/
+}
 
 html, body{
 	background-color: #f7f7f7;
@@ -56,8 +59,16 @@ h1, .h1{
 	margin: 0 auto;
 	padding: 40px 0;
 }
+
+.fleft{ float: left;}
+.col-25{ width: 25%;}
+.col-50{ width: 50%;}
+.col-75{ width: 75%;}
+.col-20{ width: 20%;}
+.col-80{ width: 80%;}
 /* Cabecera */
 .breadcrum{
 	text-transform: uppercase;
+	list-style: none
 }
 
