@@ -1,0 +1,63 @@
+*{border: 1px solid #000;}
+
+html, body{
+	background-color: #f7f7f7;
+}
+
+/* source sans pro #464646 14 pt */
+body{
+	font: 14pt/1,48em "Source Sans Pro", sans-serif;
+	color: #464646;
+}
+
+a{
+	color: #464646;
+}
+
+ul{
+	margin: 0;
+}
+
+table{
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin-top: 0; /*para evitar que añada mas espacio si he añadido padding al contenedor*/
+}
+
+h1, .h1{
+	font-size: 2em;/* 28pt/14pt */
+	line-height: 1.08em;/* 30.24/28 */
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+/* Textos */
+.bold{font-weight: bold; }
+.normal{font-weight: normal; }
+.small{font-size: 0.8em;}
+.big{font-size: 1.5em;}
+.uppercase{text-transform: uppercase;}
+.list{list-style: none; padding: 0;}
+.txt-center{text-align: center;}
+
+
+/*Colores*/
+.txt-red{color: #f00;}
+
+.bg-white{background-color:#fff;}
+
+.listblue{/* todo */padding-left: 20px}
+
+/* Layout */
+.wrapper{
+	width: 990px;
+	margin: 0 auto;
+	padding: 40px 0;
+}
+/* Cabecera */
+.breadcrum{
+	text-transform: uppercase;
+}
+
