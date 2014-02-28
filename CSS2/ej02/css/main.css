@@ -1,0 +1,42 @@
+*{
+	border: 1px solid #000;
+	box-sizing: border-box;/* CSS3 evita que coja el padding y el border para el tamaño*/
+}
+
+ul{
+	list-style: none;
+}
+
+.vertical>li{
+	position: relative;
+
+}
+
+.vertical li ul{
+	position:absolute;
+	top: 0;
+	left:100%;
+	display: none;
+}
+
+.vertical li:hover ul{
+	display:block;
+}
+
+
+.horizontal>li{
+	display: inline-block;
+}
+
+.horizontal li ul{
+	position:absolute;
+	top: 100%;
+	left:0;
+	display: none;
+}
+
+.horizontal li:hover ul{
+	display:block;
+}
+
+.horizontal li ul li{ padding: 0 20px;}
