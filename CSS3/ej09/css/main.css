@@ -2,7 +2,7 @@ body {
     margin: 0px;
 }
 #container{
-    background: #666 url(../ej03_tree.jpg) no-repeat -60px 0;
+    background: #666 url(../img/tree.jpg) no-repeat -60px 0;
     width: 420px;
     height: 480px;
     position: relative;
@@ -16,41 +16,57 @@ body {
 .snowflake.f1 {
     left: 40px;
 
-    -webkit-animation: snowing 10s ease-in infinite, fadding 10s linear;
+    -webkit-animation: snowing 10s ease-in infinite, fadding 10s linear infinite;
+    animation: snowing 10s ease-in infinite, fadding 10s linear infinite;
 }
 .snowflake.f2 {
     font-size: 1.8em;
     left: 120px;
 
-    -webkit-animation: snowing 10s ease-in infinite, fadding 10s linear;
+    -webkit-animation: snowing 15s ease-in infinite, fadding 15s linear infinite;
+    animation: snowing 15s ease-in infinite, fadding 15s linear infinite;
 }
 .snowflake.f3 {
     left: 200px;
 
-    -webkit-animation: snowing 10s ease-in infinite, fadding 10s linear;
+    -webkit-animation: snowing 13s ease-in infinite, fadding 13s linear infinite;
+    animation: snowing 13s ease-in infinite, fadding 13s linear infinite;
+
 }
 .snowflake.f4 {
     font-size: 1.5em;
     left: 280px;
 
-    -webkit-animation: snowing 10s ease-in infinite, fadding 10s linear;
+    -webkit-animation: snowing 9s ease-in infinite, fadding 9s linear infinite;
+    animation: snowing 9s ease-in infinite, fadding 9s linear infinite;
 }
 
-@-webkit-keyframe snowing{
-    from{
-        -webkit-translateY(-50px);
+@-webkit-keyframes snowing {
+    from {
+        -webkit-transform: translateY(50px);
     }
 
-    to{
-        -webkit-translateY(-480px);
+    to {
+        -webkit-transform: translateY(480px);
+    }
+}
+
+@keyframes snowing {
+    from {
+        transform: translateY(50px);
     }
 
-@-webkit fadding{
+    to {
+        transform: translateY(480px);
+    }
+}
+
+@-webkit-keyframes fadding {
     from{
         opacity: 1;
     }
 
-    90%{
+    75%{
         opacity: 1;
     }
 
@@ -58,4 +74,19 @@ body {
         opacity: 0;
     }
 }
+
+@keyframes fadding {
+    from{
+        opacity: 1;
+    }
+
+    75%{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
 }
