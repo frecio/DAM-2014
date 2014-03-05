@@ -1,0 +1,157 @@
+*{
+	/*border: 1px solid #000;*/
+	box-sizing: border-box;/* CSS3 evita que coja el padding y el border para el tamaño*/
+}
+
+html, body{
+	background-color: #f7f7f7;
+}
+
+/* source sans pro #464646 14 pt */
+body{
+	font: 14pt/1,48em "Source Sans Pro", sans-serif;
+	color: #464646;
+}
+
+a{
+	color: #000;
+	text-decoration: none;
+}
+
+ul{
+	margin: 0;
+}
+
+table{
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin-top: 0; /*para evitar que añada mas espacio si he añadido padding al contenedor*/
+}
+
+h1, .h1{
+	font-size: 2em;/* 28pt/14pt */
+	line-height: 1.08em;/* 30.24/28 */
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+/* Textos */
+.bold{font-weight: bold; }.
+.italic{font-style: italic;}
+.normal{font-weight: normal; }
+.small{font-size: 0.8em;}
+.big{font-size: 1.5em;}
+.uppercase{text-transform: uppercase;}
+.list{list-style: none; padding: 0;}
+.txt-center{text-align: center;}
+.list p{margin-top: 0}
+.list li{padding: 20px 0;}
+.list li:first-child {padding-top: 0}
+.list li h4 { color: #00f; font-style: italic}
+
+.prize{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+
+/*Colores*/
+.txt-red{color: #f00;}
+.txt-blue{color: #00f;}
+
+.bg-white{background-color:#fff;}
+
+
+.listblue li{
+	background: transparent url("../img/blue.png") no-repeat 0 5px;
+	padding-left: 20px;
+}
+
+/* botones */
+.btn{
+	display: inline-block;
+	width: 100px;
+	padding: 5px;
+	margin: auto 5px;
+
+	color: #FFF;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+
+	/*css3*/
+	border-radius: 5px;
+	box-shadow: 0 3px 5px #cdcdcd;
+	background-image: linear-gradient(to bottom, #999, #CCC);
+}
+
+.btn-red{ background-image: linear-gradient(to bottom, #f74040 80%, #d33535);}
+
+.btn-big{ padding: 10px inherit}
+
+/* Layout */
+.wrapper{
+	width: 90%;
+	max-width: 990px;
+	margin: 0 auto;
+	padding: 40px 0;
+}
+
+.wrapper:before, .wrapper.after,
+.clearfix:before, .clearfix.after{
+	content: "";
+	display: table;
+}
+
+.wrapper:after, .clearfix{clear: both;}
+
+.clearfix{ zoom: 1; }
+
+.fleft{ float: left;}
+.overflow{ overflow-x: scroll;}
+.col-25{ width: 25%;}
+.col-50{ width: 50%;}
+.col-75{ width: 75%;}
+.col-20{ width: 20%;}
+.col-80{ width: 80%;}
+
+* .bg-gray:first-child .wrapper{padding-bottom: 0px;}
+
+.descripcion{padding: 20px;}
+/* Cabecera */
+.breadcrum{
+	text-transform: uppercase;
+	list-style: none
+}
+
+.breadcrum li{display: inline-block;}
+
+.breadcrum li:after{ content: "/";}
+
+.actual:after{ content:"";}
+
+.breadcrum a{margin-right: 5px;}
+
+.marco{
+	background-color: #fff;
+	padding: 10px;
+	box-shadow: 0 0 5px #cdcdcd;/*CSS3*/
+}
+
+img{max-width: 100% }
+
+.marco p{
+	margin-left: 0
+}
+
+
+
+/*TODO*/
+/*
+	botones,
+	tabla,
+	balines
+	Pie en linea
+*//
