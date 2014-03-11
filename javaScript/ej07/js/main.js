@@ -10,6 +10,15 @@ var anade = (function(){
 	var list = $("#lista"),
 		count = lista.children.length;
 
+	var mostrarTexto = function(){
+		console.log(this);
+	};
+
+	/*for (var i = lis.length - 1; i >= 0; i--) {
+			lis[i].addEventListener('click', mostrarTexto);
+	*/
+	list.addEventListener.addEventListener('click', mostrarTexto);
+
 	var anade = function(){
 
 		var listItem = document.createElement("li");
