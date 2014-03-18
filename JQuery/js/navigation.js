@@ -1,10 +1,19 @@
 $(function(){
-	$liMenu = $('#nav>li');
+    'use strict';
+	var $liMenu = $('#nav>li');
 
-	function mostrarSubmenu(e){
-		$liSubmenu = $(li).find();
-	}
 
-	$(document).on('hover', '#nav>li', mostrarSubmenu);
+
+	function desplegar(e){
+        var $this = $(this);
+        $(this).find('ul').show();
+	};
+
+    function recoger(e){
+        var $this = $(this);
+        $(this).find('ul').hide();
+    };
+
+	$liMenu.hover(desplegar, recoger);
 	console.log($liMenu);
 });
