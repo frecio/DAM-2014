@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	$ticker.data({
 		'activo' : true,
-		'noticias' : {},
+		'noticias' : [],
 		'noticiaActual': 0
 
 	});
@@ -17,6 +17,7 @@ $(document).ready(function(){
 			hora.getSeconds() + ' ' + data;
 		$ticker.text(mensaje);
 		$ticker.data('noticias').push(mensaje);
+
 
 	};
 
