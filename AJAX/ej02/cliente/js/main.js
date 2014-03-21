@@ -37,12 +37,10 @@ $(document).ready(function(){
 		var activo = $ticker.data('activo');
 		if(activo){
 			$ticker.data('activo', false);
-			//clearInterval(intervalo);
 			clearInterval($ticker.data('intervalo'));
 			$ticker.css('background-color', '#FAFAFA');
 		}else{
 			$ticker.data('activo', true);
-			//intervalo = setInterval(pedirNoticia, 1000);
 			$ticker.data('intervalo',setInterval(pedirNoticia, 1000));
 		}
 
@@ -74,11 +72,9 @@ $(document).ready(function(){
 	};
 
 	var pedirNoticia = function(){
-		mostrarNoticiaNueva("noticia");
-/*
+
 		$.ajax({
-			//url : '../servidor/generaContenidos.php',
-			url : 'servidor/generaContenidos.php',
+			url : '../servidor/generaContenidos.php',
 			dataType : 'text',
 			cache : false,
 			success : function(data, textStatus, jqXHR){
@@ -89,7 +85,7 @@ $(document).ready(function(){
 				console.log(errorThrown);
 			},
 
-		});*/
+		});
 	};
 
 

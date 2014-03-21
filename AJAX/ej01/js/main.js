@@ -24,6 +24,7 @@ $(document).ready(function(){
 			url : $('#recurso').val(),
 			dataType : 'text',
 			cache : false,
+			crossDomanin: true,
 			success : function(data, textStatus, jqXHR){
 				console.log('exito');
 				mostrarContenido(data);
