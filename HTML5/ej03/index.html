@@ -1,23 +1,57 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
 	<title>Formulario HTML5</title>
 </head>
 <body>
+	<header>
+		<h1>Campos formulario HTML5</h1>
+	</header>
+	<article>
+		<form action="post" id="formulario">
+			<label for="nombre">Nombre</label>
+			<input type="text" autofocus="true" id="nombre" required="true" autocomplete="true"><br/>
+			<label for="password">Password</label>
+			<input type="password" id="password" pattern="[0-9](.{6,})[A-Z]"><br/>
+			<label for="email">Email</label>
+			<input type="email" id="email" placeholder="usuario@ejemplo.com"><br/>
+			<label for="url">Website</label>
+			<input type="url" id="url"><br/>
+			<label for="date">Introduce la fecha</label>
+			<input type="date" id="date"><br/>
+			<label for="time">Introduce la hora</label>
+			<input type="time" id="time"><br/>
+			<label for="datetime-local">Ahora todo junto</label>
+			<input type="datetime" id="datetime"><br/>
+			<label for="month">Un mes</label>
+			<input type="month" id="month"><br/>
+			<label for="week">Una semana</label>
+			<input type="week" id="week"><br/>
+			<label for="number" min="0" max="10">Escribe un número del 0 al 10</label>
+			<input type="number" id="number"><br/>
+			<label for="range">elige la zona del rango en la que te encuentras</label>
+			<input type="range" id="range"><br/>
+			<label for="tel">Teléfono móvil</label>
+			<input type="tel" id="tel"><br/>
+			<label for="search">Término de búsqueda</label>
+			<input type="search" id="search"><br/>
+			<label for="color">Color favorito</label>
+			<input type="color" id="color"><br/>
+			<input type="file" multiple="multiple">Sube fotos para tu perfil><br/>
+			<label for="provincia">Elige una provincia</label>
+			<input type="text" id="provincia" list="listaprovincias"><br/>
+			<datalist id="listaprovincias">
+				<option value="Gipuzkoa">Gipuzkoa</option>
+				<option value="Alava">Alava</option>
+				<option value="Bizkaia">Bizkaia</option>
+			</datalist>
+			<progress id="progreso"></progress><br/>
+			<input type="submit">
 
-	<input type="text" autofocus="true">
-	<input type="email">
-	<input type="url">
-	<input type="date">
-	<input type="time">
-	<input type="month">
-	<input type="week">
-	<input type="number">
-	<input type="range">
-	<input type="tel">
-	<input type="search">
-	<input type="color">
+			<meter value="1" min="0" max="1" high="0.8"></meter>
+		</form>
+	</article>
 	<script src="libs/jquery-1.11.0.js"></script>
 	<script src="js/main.js"></script>
 </body>
