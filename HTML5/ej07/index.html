@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Reproductor de video</title>
+</head>
+<body>
+	<header>
+		<h1>Reproductor de video</h1>
+	</header>
+
+	<video id="reproductor">
+		<source src="video/yatta.mp4" type="video/mp4">
+		<source src="video/yatta.webm" type="video/webm">
+	</video><br/>
+	<button id="play">Play</button>
+	<button id="pause">Pause</button>
+	<button id="stop">Stop</button>
+	<button id="retroceder">Retroceder</button>
+	<button id="avanzar">Avanzar</button>
+	<button id="inicio">Inicio</button>
+	<button id="fin">Fin</button>
+	<button id="fullscreen">Pantalla completa</button>
+	<input type="range" id="volumen" min="0" max="10" steep="1">
+	<progress id="progreso" value="0" min="0" max="1"></progress>
+
+	<script src="libs/jquery-2.1.0.js"></script>
+	<script src="js/main.js"></script>
+</body>
