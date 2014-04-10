@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
@@ -9,6 +9,21 @@
 <body>
 
 	<div data-role="page" id="index">
+
+		<div data-role="panel" id="panel" data-display="push" data-position="left">
+
+			<ul data-role="navbar" data-iconpos="right">
+				<li><a href="dialogo.html" data-rel="dialog" data-transition="pop" data-icon="arrow-r">Mostrar diálogo</a></li>
+				<li>
+					<a href="#popup" data-rel="popup" data-icon="arrow-r">Abrir Popup</a>
+					<div data-role="popup" id="popup">
+						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar</a>
+						<p>Buh!!<p>
+					</div>
+					</li>
+				<li><a href="#index" data-rel="close" data-icon="arrow-r">Cerrar panel</a></li>
+			</ul>
+		</div>
 		<div data-role="header">
 			<h1>JQUERY MOBILE</h1>
 		</div>
@@ -17,25 +32,11 @@
 
 			<a href="multiple.html" data-ajax="false">Ir a multiple.html</a><br/>
 
-			<div data-role="panel" id="panel" data-display="push" data-position="left">
-
-				<ul data-role="navbar" data-iconpos="right">
-					<li><a href="dialogo.html" data-rel="dialog" data-transition="pop" data-icon="arrow-r">Mostrar diálogo</a></li>
-					<li>
-						<a href="#popup" data-rel="popup" data-icon="arrow-r">Abrir Popup</a>
-						<div data-role="popup" id="popupBasic">
-							<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar</a>
-							<p>Buh!!<p>
-						</div>
-						</li>
-					<li><a href="#index" data-rel="close" data-icon="arrow-r">Cerrar panel</a></li>
-				</ul>
-			</div>
 			<a href="#panel" data-role="button" data-inline="true">Mostrar panel</a>
 		</div>
 		<div data-role="footer">Francisco Recio</div>
 	</div>
 
 
-
+	<script type="text/javascript" src="js/main.js"></script>
 </body>

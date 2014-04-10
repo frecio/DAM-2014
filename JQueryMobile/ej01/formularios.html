@@ -1,0 +1,54 @@
+﻿<!DOCTYPE>
+<html lang="es">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+
+	<div data-role="page"><!-- Page -->
+		<header data-role="header">
+			<h1>Formulario</h1>
+		</header>
+
+		<div data-role="content">
+			<form action="" method="post">
+				<div data-role="fieldcontain" class="ui-hide-label">
+					<label for="nombre">Nombre</label>
+					<input type="text" name="nombre" id="username" value="" placeholder="Nombre"/>
+				</div>
+
+				<fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
+					<legend>Sexo:</legend>
+				     	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+				     	<label for="radio-choice-1">hombre</label>
+
+				     	<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+				     	<label for="radio-choice-2">Mujer</label>
+				</fieldset>
+
+				<fieldset data-role="controlgroup" data-iconpos="right">
+					<input type="checkbox" name="checkbox-agree" id="checkbox-agree" class="custom" />
+					<label for="checkbox-agree">Soy mayor de edad:</label>
+				</fieldset>
+
+				<label for="slider-fill">Valoración:</label>
+				<input type="range" name="slider-fill" id="slider-fill" value="" min="0" max="10" data-highlight="true" />
+
+				<label for="flip-mini">Repetirá la experiencia:</label>
+				<select name="flip-mini" id="flip-mini" data-role="slider" data-mini="true">
+					<option value="si">Sí</option>
+					<option value="no">No</option>
+				</select>
+			</form>
+		</div>
+
+		<div data-role="content">
+
+		</div><!-- Page end -->
+	</div>
+
+</body>
