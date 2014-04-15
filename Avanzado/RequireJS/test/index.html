@@ -9,7 +9,7 @@
 <body>
     <div id="mocha"></div>
     <script src="bower_components/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd')</script>
+    <script>mocha.setup('bdd');</script>
     <script src="bower_components/chai/chai.js"></script>
     <script>
         var assert = chai.assert;
@@ -20,8 +20,10 @@
     <!-- include source files here... -->
     <script src="../app/bower_components/requirejs/require.js"></script>
     <!-- include spec files here... -->
+    <script src="spec/testFizz.js"></script>
+    <script src="spec/testBuzz.js"></script>
     <script src="spec/test.js"></script>
 
-    <script>mocha.run()</script>
+    <script>mocha.run();</script>
 </body>
 </html>

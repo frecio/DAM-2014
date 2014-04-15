@@ -17,11 +17,11 @@
     		require(['FizzBuzz'], function(module){
     			mod = module;
     			done();
-    		})
-    	})
+    		});
+    	});
 
         describe('test metodo', function () {
-            it('fizzuzz(1) should return 1', function () {
+            it('fizzbuzz(1) should return 1', function () {
             	var resp = mod.fb(1);
             	assert.equal(resp, '1');
             	assert.typeOf(resp, 'string');
@@ -29,15 +29,15 @@
         });
 
         describe('test metodo', function () {
-            it('fizzuzz(2)should return 1 2', function () {
+            it('fizzbuzz(2)should return 1 2', function () {
             	var resp = mod.fb(2);
-            	    assert.equal(resp, '1 2');
+            	assert.equal(resp, '1 2');
             	assert.typeOf(resp, 'string');
             });
         });
 
         describe('test metodo', function () {
-            it('fizzuzz(2)should return 1 2 Fizz', function () {
+            it('fizzbuzz(2)should return 1 2 Fizz', function () {
             	var resp = mod.fb(3);
             	assert.equal(resp, '1 2 Fizz');
             	assert.typeOf(resp, 'string');
@@ -45,7 +45,7 @@
         });
 
         describe('test metodo', function () {
-            it('fizzuzz(5)should return 1 2 Fizz 4 Buzz', function () {
+            it('fizzbuzz(5)should return 1 2 Fizz 4 Buzz', function () {
             	var resp = mod.fb(5);
             	assert.equal(resp, '1 2 Fizz 4 Buzz');
             	assert.typeOf(resp, 'string');
@@ -53,10 +53,19 @@
         });
 
         describe('test metodo', function () {
-            it('fizzuzz(15)should return 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz', function () {
-            	var resp = mod.fb(15);
-            	assert.equal(resp, '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz');
+            it('fizzbuzz(15)should return 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz', function () {
+                var resp = mod.fb(15);
+                assert.equal(resp, '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz');
+                assert.typeOf(resp, 'string');
+            });
+        });
+
+        describe('test metodo', function () {
+            it('fizzbuzz() shoul return \'\'', function () {
+            	var resp = mod.fb();
+            	assert.equal(resp, '');
             	assert.typeOf(resp, 'string');
+                assert.lengthOf(resp,0);
             });
         });
     });
