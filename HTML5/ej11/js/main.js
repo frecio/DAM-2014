@@ -55,7 +55,7 @@ function add (todoText) {
 
     store.transaction.oncomplete = function(e){
         getAllTodoItems();
-    }
+    };
 }
 
 function getAllTodoItems() {
@@ -70,14 +70,14 @@ function getAllTodoItems() {
     cursorRequest.onsuccess = function(e) {
         var result = e.target.result;
         if(!!result == false) return;
-        console.log(result.value)
+        console.log(result.value);
         todos.innerHTML+=
         '<li data-timestamp="' + result.value.timeStamp + '">' + result.value.text + '</li>';
         result.continue();
     };
 
     cursorRequest.onerror = onerror;
-};
+}
 
 function del(timestamp){
     var transaction = db.transaction(["todo-list"], "readwrite");
@@ -93,16 +93,16 @@ function del(timestamp){
 
     store.transaction.oncomplete = function(e){
         getAllTodoItems();
-    }
+    };
 
 
-};
+}
 
 function addTodo() {
     var todo = document.getElementById("todo");
     add(todo.value);
     todo.value = "";
-};
+}
 
 var deleteTodo = function(e) {
     console.log(this);

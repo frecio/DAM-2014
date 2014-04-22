@@ -3,17 +3,19 @@
 <head>
 	<meta charset="utf-8">
     <title>Ejercicio de Webworkers</title>
+    <script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
 	<h1>Webworkers</h1>
 	<form action="">
 		<label for="numero"></label>
 		<input type="number" id="numero">
-	    <input type="submit" value="Calcular">
+	    <button id="calcular">Calcular</button>
     </form>
-    <p id="primos">Primos: </p>
+    <p id="primos"></p>
 
     <script src="js/vendor/jquery-1.11.0.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/myworker.js"></script>
 </body>
 </html>

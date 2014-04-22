@@ -1,22 +1,30 @@
-"use strict"
+(function(){
+    'use strict';
 
-var escribirDatos = function(e){
-
-
-}
+    var worker = new Worker('js/myworker.js');
 
 
-var llamarWorker =  function(e){
+    var escribirResultado= function(evt){
+        var nums=  $('#primos').text();
+        $('#primos').text('primos:' + nums +" "+ evt.data+" ");
+    };
 
-	var number = document.getElementById('numero').value;
+    var obtenerPrimos = function(){
+         $('#primos').text("");
+        if(Modernizr.webworkers) {
+            var number =  $('#numero').val();
+            if (number){
+                worker.postMessage({'num': number});
+            }
+        }
+        else {
+            console.log('El explorador NO soporta Web workers');
+        }
+    };
 
-	if (!isNaN(number)){
-		var worker = new Worker('worker.js');
-		worker.postMessage(JSON.stringify({"number" : number}));
-		worker.addEventListener('message', escribirDatos);
-	}
 
+    worker.addEventListener('message', escribirResultado, false);
 
+    $(document).on('click', '#calcular', obtenerPrimos);
 
-}
-$(document).on('submit', 'form', llamarWorker);
+})();

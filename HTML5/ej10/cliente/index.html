@@ -1,18 +1,39 @@
+
 <!DOCTYPE html>
-<html lang="es">
+  <html lang="en">
 <head>
-	<title>WebSQL</title>
+  <title>WebSQL</title>
+
 </head>
+
 <body>
-	<header>
-		<h1>Prueba de webSQL</h1>
-	</header>
-	<input type="text" id="tweets" list="listatweets"><br/>
-	<datalist id="listatweets"></datalist>
-	<button id="elimintar">Eliminar tweet</button>
+  <header>
+    <h1>Tweets con WebSQL</h1>
+  </header>
+    <p>Nombre</p>
+    <input type="text" id="name"/>
+    <p>Tweet</p>
+    <input type="text" id="texto"/>
+    <p>Fecha</p>
+    <input type="date" id="fecha"/>
+    <button id='addtweet'>Add Tweet</button>
+
+    <p>Id del tweet</p>
+    <select  id="listatweets"></select>
+    <p>Texto:</p>
+    <input type="text" id="actualtext"/>
+    <button id='updatetweet'>Update tweet</button>
+    <button id='deletetweet'>Delete Tweet</button>
 
 
+    <p>Obtener tweets posteriores a:</p>
+    <input type="date" id="fechapost"/>
+    <button id='fechatweet'>Obtener tweets</button>
+    <ul id="tweetfecha"></ul>
+    <button id='borra'>Borrar Tablas</button>
 
-	<script src="libs/jquery-2.1.0.js"></script>
-	<script src="js/main.js"></script>
+
+<script src="libs/jquery-2.1.0.js"></script>
+ <script src="js/main.js"></script>
 </body>
+</html>

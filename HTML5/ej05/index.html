@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+  <html lang="en">
+<head>
+  <title>Polyfills</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <!-- This CSS file is not necessary to use html5Widgets -->
+  <link type="text/css" rel="stylesheet" href="libs/html5Formsjs-master/shared/css/useragentmanExample.css">
+  <!--Modernizr q venía cn el polyfill si se usa otro no funciona-->
+  <script type="text/javascript" src="libs/html5Formsjs-master/shared/js/modernizr.com/Modernizr-2.5.3.forms.js"></script>
+  <!--Polifill para formularios con datetime ...-->
+  <script type="text/javascript" src="libs/html5Formsjs-master/shared/js/html5Forms.js" data-webforms2-support="date" data-webforms2-force-js-validation="true" data-lang="es"></script>
+  <!--<script src="libs/vendor/modernizr.custom.80841.js"></script>-->
+  <script src="libs/jquery-1.11.0.js"></script>
+  <!--Usado con el polifill anterior de formularios -->
+  <script src="libs/JSColor-master/jscolor.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Formulario HTML5 con pollyfills</h1>
+  </header>
+  <section>
+    <form id="formulario" action="post">
+        <p>Autofocus, placeholder, required y autocomplete:</p>
+        <input type="text" autofocus="true" required="true"  autocomplete="true"/>
+         <p>Password:</p>
+        <input type="password" id="pw" pattern = "([0-9](.{6,})[A-Z])"/>
+        <p>email:</p>
+        <input type="email" autocomplete="true">
+        <p>url:</p>
+        <input type="url">
+        <p>date:</p>
+        <input type="date">
+        <p>time:</p>
+        <input type="time">
+        <p>datetime:</p>
+        <input type="datetime">
+        <p>month:</p>
+        <input type="month">
+        <p>week:</p>
+        <input type="week">
+        <p>number:</p>
+        <input type="number">
+        <p>range:</p>
+        <input type="range">
+        <p>tel:</p>
+        <input type="tel">
+        <p>search:</p>
+        <input type="search">
+        <p>color:</p>
+        <input type="color">
+        <p>Datalist Provincias:</p>
+        <input id="prov" type="text" list="provincias">
+        <datalist id="provincias">
+         <option label="Gi" value="Gipuzkoa"></option>
+         <option label="Ar" value="Araba"></option>
+         <option label="Biz" value="Bizkaia"></option>
+        </datalist>
+        <p>Caja de texto que solo pueda contener numeros entre 1 y 10:</p>
+        <input type="number" name="cantidad" min="1" max="10">
+        <p>Selección de ficheros:</p>
+        <input type="file" multiple="true">
+        <p>Completado</p>
+        <input type="range" value="0" min= "0" max="17" step="1">
+
+        <p>meter:</p>
+        <meter value="0" min= "0" max="17" high="14"></meter>
+        <p>Progress:</p>
+        <progress max="100"></progress>
+
+
+        <!--<input type="submit">-->
+    </form>
+    <ul id="datos"></ul>
+  </section>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
