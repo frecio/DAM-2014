@@ -2,69 +2,55 @@
     'use strict';
 
     require.config({
-    	baseUrl : '../app/scripts/',
-
-    	paths : {
-    		jquery: '../bower_components/jquery/dist/jquery'
-    	},
-
-    	shim : {
-
-    	}
+        baseUrl : '../../app/scripts/',
+        paths : {
+            jquery: '../bower_components/jquery/dist/jquery',
+        },
+        shim : {
+            // 'ydn-db': {
+            //     exports : 'ydn'
+            // }
+        }
     });
 
+    describe('Service module', function () {
+        var srv, $;
 
-    describe('Service module', function(){
-    	var srv, $;
+        beforeEach(function(done){
+            require(['Service', 'jquery'], function(service, jQuery){
+                srv = service;
+                $ = jQuery;
 
-
-    	beforeEach(function(done){
-
-            require(['Service', 'jquery'], function(service, jquery){
-    			srv = service;
-                $ = jquery;
-
-                var spy = sinon.spy($,'ajax');
-
-    			done();
-    		});
-
-    	});
-
-        afterEach(function(){
-            $.ajax.restore();
+                sinon.spy($, 'ajax');
+                done();
+            });
         });
 
+        afterEach(function(done){
+            $.ajax.restore();
+            done();
+        });
 
-
-    	describe('#getTweets', function(){
-            it('$.ajax has been called', function(done){
+        describe('#getTweets', function () {
+            it('$.ajax has been called', function (done) {
                 srv.getTweets();
                 assert.isTrue($.ajax.calledOnce);
                 assert.equal('/app/data/tweets.json', $.ajax.firstCall.args[0].url);
                 done();
             });
-
-    		it('Get all tweets', function(done){
-    			srv.getTweets({
+            it('Get all tweets from Twitter', function (done) {
+                srv.getTweets({
                     apiKey : ''
-                },
-                function (tweets){
-                    console.log(tweets);
-                    if(tweets && tweets.statuses && tweets.statuses.length === 100){
+                }, function(tweets){
+                    if(tweets && tweets.statuses && tweets.statuses.length === 100) {
                         done();
-                    }else{
-                        throw 'No se han obtenido los test';
+                    } else {
+                        throw 'Method returned empty value';
                     }
-
-                },
-                function(error){
-                    throw error;
+                }, function(err){
+                        throw err;
                 });
-                //done();
-    		});
-
-    	});
-
+            });
+        });
     });
 })();
