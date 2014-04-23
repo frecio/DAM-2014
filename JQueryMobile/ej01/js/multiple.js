@@ -52,5 +52,4 @@ $('#page1, #page2').on('pageremove', function(e){
 
 $('#index, #page1','#page2').on('tap', function(e){
 	console.log('tap');
-	alert('tap');
 });

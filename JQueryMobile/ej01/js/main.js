@@ -4,7 +4,6 @@ $('#index').on('orientationchange', function(e){
 
 $('#index').on('tap', function(e){
 	console.log('tap');
-	alert('tap');
 });
 
 $('#index').on('taphold', function(e){
