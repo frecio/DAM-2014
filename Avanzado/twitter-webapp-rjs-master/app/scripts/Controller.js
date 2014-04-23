@@ -1,11 +1,11 @@
 'use strict';
 define('Controller', ['Data', 'Service'], function(DB, srv){
 
-	var getTweetsFromTwitter = function(){
-		srv.getTweets({}, proccessTweets, error);
+	var getTweetsFromTwitter = function(successCallBack, errorCallBack){
+		srv.getTweets({}, function(data){proccessTweets(data, successCallBack, errorCallBack);}, error);
 	};
 
-	var proccessTweets = function(data){
+	var proccessTweets = function(data, success, error){
 		var tweets = [];
 
 		if(data && data.statuses && data.statuses.length >0){
@@ -18,11 +18,10 @@ define('Controller', ['Data', 'Service'], function(DB, srv){
 				tweet.user.name = data.statuses[i].user.name;
 				tweet.user.profile_image_url = data.statuses[i].user.profile_image_url;
 				tweet.user.id_str = data.statuses[i].user.id_str;
-				console.log(tweet.created_at);
 				tweets.push(tweet);
 			}
 
-			DB.addTweets(tweets);
+			DB.addTweets(tweets, success, error);
 		}
 
 	};
