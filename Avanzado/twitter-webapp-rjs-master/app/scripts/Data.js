@@ -1,4 +1,7 @@
 define('Data', ['ydn-db'], function(ydn) {
+
+    'use strict';
+
     console.log('Data module started');
 
     var dbName = 'TwitterDB',
@@ -8,13 +11,22 @@ define('Data', ['ydn-db'], function(ydn) {
 
     var addTweet = function(tweet, success, error) {
         var req = db.add({name: tweetTable, keyPath: keyPath}, tweet);
-        req.done(success);
+        req.done(function(){
+            throwEvent();
+            success();
+        });
         req.fail(error);
     };
 
     var addTweets = function(tweets, success, error) {
         var req = db.add({name: tweetTable, keyPath: keyPath}, tweets);
-        req.done(success);
+        req.done(function(keys){
+            throwEvent();
+            if (success){
+                success(keys);
+            };
+
+        });
         req.fail(error);
     };
 
@@ -58,6 +70,11 @@ define('Data', ['ydn-db'], function(ydn) {
         var req = db.clear(tweetTable);
         req.done(success);
         req.fail(error);
+    };
+
+    var throwEvent = function(){
+        var event = new Event('datachange');
+        document.dispatchEvent(event);
     };
 
     return {

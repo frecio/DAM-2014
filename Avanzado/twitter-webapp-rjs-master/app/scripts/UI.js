@@ -1,4 +1,4 @@
-define('UI',['jquery', 'handlebars'],function($, hb){
+define('UI',['quo', 'handlebars'],function($, hb){
 	'use strict';
 
 	console.log('UI started');
@@ -11,8 +11,9 @@ define('UI',['jquery', 'handlebars'],function($, hb){
 
 		var	html = template({tweets : tweets});
 		$list.html(html);
-
-		success();
+		if (success){
+			success();
+		}
 	};
 
 	return{

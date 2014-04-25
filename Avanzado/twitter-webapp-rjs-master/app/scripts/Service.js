@@ -1,5 +1,5 @@
 'use strict';
-define('Service', ['jquery'], function($){
+define('Service', ['quo'], function($){
     console.log('Service module started');
 
     var getTweets = function(config, success, error) {

@@ -1,5 +1,8 @@
-'use strict';
-define('Controller', ['Data', 'Service'], function(DB, srv){
+define('Controller', ['Data', 'Service', 'UI'], function(DB, srv, UI){
+
+	'use strict';
+
+	console.log('Controller module started');
 
 	var getTweetsFromTwitter = function(successCallBack, errorCallBack){
 		srv.getTweets({}, function(data){proccessTweets(data, successCallBack, errorCallBack);}, error);
@@ -27,10 +30,18 @@ define('Controller', ['Data', 'Service'], function(DB, srv){
 	};
 
 	var error = function(error){
+		console.log(error);
+	};
 
+	var showLatestTweets = function(){
+		//get latest data from provider
+		DB.getTweets(function(tweets){
+			UI.showTweetList(tweets);
+		});
 	};
 
 	return{
-		getTweetsFromTwitter : getTweetsFromTwitter
+		getTweetsFromTwitter : getTweetsFromTwitter,
+		showLatestTweets : showLatestTweets
 	};
 });
