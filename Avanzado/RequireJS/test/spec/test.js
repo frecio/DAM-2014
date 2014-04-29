@@ -68,5 +68,14 @@
                 assert.lengthOf(resp,0);
             });
         });
+
+        describe('test metodo', function () {
+            it('fizzbuzz("aaaa") shoul return \'\'', function () {
+                var resp = mod.fb('aaaa');
+                assert.equal(resp, '');
+                assert.typeOf(resp, 'string');
+                assert.lengthOf(resp,0);
+            });
+        });
     });
 })();
