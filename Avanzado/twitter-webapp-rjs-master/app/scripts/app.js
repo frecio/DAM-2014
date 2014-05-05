@@ -1,9 +1,22 @@
-define(['Controller', 'Data'], function(Controller) {
+define(['Controller', 'Data', 'Events', 'lungo', 'quo'], function(Controller, Data, Events, Lungo, $) {
+    'use strict';
 
-	'use strict';
+    console.log('App started');
 
-	console.log('App started');
+    var init = function(){
+        // Init Lungo
+        Lungo.init({
+            name: 'TwitterApp'
+        });
 
-	Controller.getTweetsFromTwitter();
-	Controller.showLatestTweets();
+        // Init Data module
+        Data.init();
+
+        Controller.showLatestTweets();
+        Controller.getTweetsFromTwitter();
+    };
+
+    $(function(){
+        init();
+    });
 });
