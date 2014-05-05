@@ -29,19 +29,34 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <ul id="twitter-list"></ul>
+
+        <section id="main" data-aside="features" data-transition="slide">
+            <header data-title="Twitter Webapp">
+                <nav>
+                    <button data-view-aside="features" data-icon="menu"></button>
+                </nav>
+            </header>
+
+            <article id="main-article" class="active list scroll twitter-list">
+                <ul data-type="list" data-prototype data-anchor></ul>
+                <div class="main-loading" data-loading></div>
+            </article>
+
+
+            <footer>
+                <nav>
+                    <a href="#" data-view-article="main-article" data-icon="time" class="active"></a>
+
+                </nav>
+            </footer>
+        </section>
+
+        <!--ul id="twitter-list"></ul-->
 
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
         <!-- endbuild -->
 
-        <script id="list-tpl" type="text/x-handlebars-template">
-            {{#each tweets}}
-                <li>
-                    {{id}} - {{text}}
-                </li>
-            {{/each}}
-        </script>
 </body>
 </html>

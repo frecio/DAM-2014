@@ -10,7 +10,7 @@ define(['Controller', 'Data', 'Events', 'lungo', 'quo'], function(Controller, Da
         });
 
         // Init Data module
-        Data.init();
+        //Data.init();
 
         Controller.showLatestTweets();
         Controller.getTweetsFromTwitter();

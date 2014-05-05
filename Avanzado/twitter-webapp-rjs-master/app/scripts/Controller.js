@@ -36,12 +36,21 @@ define('Controller', ['Data', 'Service', 'UI'], function(DB, srv, UI){
 	var showLatestTweets = function(){
 		//get latest data from provider
 		DB.getTweets(function(tweets){
-			UI.showTweetList(tweets);
+			UI.showTweetsList(tweets);
 		});
 	};
 
+	var showDetail = function(e) {
+        var id = this.dataset.id;
+
+        DB.getTweet(id, function(tweet) {
+            UI.showDetail(tweet);
+        });
+    };
+
 	return{
 		getTweetsFromTwitter : getTweetsFromTwitter,
-		showLatestTweets : showLatestTweets
+		showLatestTweets : showLatestTweets,
+		showDetail : showDetail
 	};
 });
