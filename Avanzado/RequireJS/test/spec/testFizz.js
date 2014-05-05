@@ -38,12 +38,12 @@
             	assert.isTrue(mod.isFizz(3), 'true');
             	assert.isTrue(mod.isFizz(6), 'true');
             	assert.isTrue(mod.isFizz(9), 'true');
-            	assert.isTrue(mod.isFizz(12), 'true');
-            	assert.isTrue(mod.isFizz(15), 'true');
-            	assert.isTrue(mod.isFizz(18), 'true');
-            	assert.isTrue(mod.isFizz(21), 'true');
-            	assert.isTrue(mod.isFizz(24), 'true');
-            	assert.isTrue(mod.isFizz(27), 'true');
+            	assert.isTrue(mod.isFizz(42), 'true');
+            	assert.isTrue(mod.isFizz(45), 'true');
+            	assert.isTrue(mod.isFizz(78), 'true');
+            	assert.isTrue(mod.isFizz(81), 'true');
+            	assert.isTrue(mod.isFizz(141), 'true');
+            	assert.isTrue(mod.isFizz(270), 'true');
             });
         });
 
